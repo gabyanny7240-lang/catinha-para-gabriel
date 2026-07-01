@@ -3,69 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Para Gabriel ❤️</title>
 
-<link rel="stylesheet" href="css/style.css">
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:linear-gradient(#12031f,#31114b,#ff6fa5);
+overflow-x:hidden;
+color:white;
+text-align:center;
+}
+
+/* ESTRELAS */
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+overflow:hidden;
+z-index:-1;
+}
+
+.star{
+position:absolute;
+background:white;
+width:3px;
+height:3px;
+border-radius:50%;
+animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+from{
+opacity:.2;
+transform:scale(.5);
+}
+to{
+opacity:1;
+transform:scale(1.3);
+}
+}
+
+/* TELA INICIAL */
+
+#inicio{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+#inicio h1{
+font-size:38px;
+margin-bottom:20px;
+}
+
+#inicio p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+/* CORAÇÃO */
+
+.heart{
+
+width:120px;
+height:120px;
+
+background:#ff2f74;
+
+transform:rotate(-45deg);
+
+animation:pulse 1s infinite;
+
+cursor:pointer;
+
+position:relative;
+
+}
+
+.heart:before,
+.heart:after{
+
+content:"";
+
+position:absolute;
+
+width:120px;
+height:120px;
+
+background:#ff2f74;
+
+border-radius:50%;
+
+}
+
+.heart:before{
+
+top:-60px;
+
+left:0;
+
+}
+
+.heart:after{
+
+left:60px;
+
+top:0;
+
+}
+
+@keyframes pulse{
+
+0%{transform:rotate(-45deg) scale(1);}
+
+50%{transform:rotate(-45deg) scale(1.15);}
+
+100%{transform:rotate(-45deg) scale(1);}
+
+}
+
+#conteudo{
+
+display:none;
+
+padding:40px 20px;
+
+}
+
+h2{
+
+margin-top:20px;
+
+margin-bottom:20px;
+
+font-size:34px;
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<div class="stars"></div>
+<div class="stars" id="stars"></div>
 
-<div class="heart-screen">
-<div class="heart"></div>
-</div>
+<section id="inicio">
 
-<div class="container">
+<h1>Para o amor da minha vida ❤️</h1>
 
-<h1>Para o meu amor, Gabriel ❤️</h1>
+<p>Gabriel</p>
 
-<p class="data">
-Desde 28/08/2025 ✨
-</p>
+<div class="heart" onclick="abrirCarta()"></div>
 
-<div class="galeria">
+<p style="margin-top:40px;">Clique no coração</p>
 
-<img src="imagens/foto1.jpg">
+</section>
 
-<img src="imagens/foto2.jpg">
+<section id="conteudo">
 
-<img src="imagens/foto3.jpg">
-
-<img src="imagens/foto4.jpg">
-
-<img src="imagens/foto5.jpg">
-
-</div>
-
-<div class="carta">
-
-<p>
-Meu amor,
-
-Desde que você entrou na minha vida, tudo ficou mais bonito. Cada sorriso seu ilumina meus dias e cada momento ao seu lado vira uma lembrança que quero guardar para sempre.
-
-Obrigada por ser meu porto seguro, meu melhor amigo e a pessoa que faz meu coração bater mais forte.
-
-Espero que esta seja apenas uma das muitas lembranças lindas da nossa história.
-
-Eu te amo infinitamente. ❤️
-</p>
-
-</div>
-
-<iframe style="border-radius:12px"
-src="https://open.spotify.com/embed/track/4404ixp3ApDtyRwje7Kgu4"
-width="100%"
-height="152"
-frameBorder="0"
-allowfullscreen=""
-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-</iframe>
-
-</div>
-
-<script src="js/script.js"></script>
-
-</body>
-</html>
+<h2>Nossa História 💕</h2>
