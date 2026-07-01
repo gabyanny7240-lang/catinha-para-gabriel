@@ -177,3 +177,174 @@ font-size:34px;
 <section id="conteudo">
 
 <h2>Nossa História 💕</h2>
+<p style="font-size:20px;margin:20px;">
+Desde <b>28/08/2025</b> meu coração encontrou o lugar onde pertence. ❤️
+</p>
+
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin:30px 0;">
+
+<img src="imagens/foto1.jpg" style="width:180px;border-radius:20px;box-shadow:0 0 20px pink;">
+
+<img src="imagens/foto2.jpg" style="width:180px;border-radius:20px;box-shadow:0 0 20px pink;">
+
+<img src="imagens/foto3.jpg" style="width:180px;border-radius:20px;box-shadow:0 0 20px pink;">
+
+</div>
+
+<div style="
+max-width:700px;
+margin:auto;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:25px;
+line-height:1.9;
+font-size:20px;
+">
+
+<h2>💌 Meu amor...</h2>
+
+<p>
+
+Gabriel,
+
+Desde que você entrou na minha vida, tudo ficou mais bonito.
+
+Você transformou dias comuns em lembranças inesquecíveis.
+
+Cada sorriso seu faz meu coração bater mais forte, e cada momento ao seu lado me faz ter certeza de que encontrei a pessoa certa.
+
+Obrigada por me amar, por cuidar de mim e por fazer parte da minha vida.
+
+Espero viver muitos sonhos ao seu lado e criar milhares de novas lembranças.
+
+Eu te amo mais do que qualquer palavra poderia explicar.
+
+❤️
+
+</p>
+
+<p style="margin-top:25px;">
+
+Com todo meu amor,
+
+<b>Anny ❤️</b>
+
+</p>
+
+</div>
+
+<br><br>
+
+<a href="https://open.spotify.com/track/4404ixp3ApDtyRwje7Kgu4?si=5OsmEl-9S8aDu3hYB5phQw" target="_blank">
+
+<button style="
+padding:18px 40px;
+font-size:22px;
+border:none;
+border-radius:50px;
+background:#ff3d87;
+color:white;
+cursor:pointer;
+">
+
+🎵 Nossa Música
+
+</button>
+
+</a>
+
+<br><br>  
+<div id="contador" style="margin-top:50px;">
+<h2>⏳ Nosso tempo juntos</h2>
+<p id="tempo" style="font-size:25px;font-weight:bold;"></p>
+</div>
+
+<br><br>
+
+<button onclick="surpresaFinal()" style="
+padding:18px 40px;
+font-size:22px;
+border:none;
+border-radius:50px;
+background:#ff6fa5;
+color:white;
+cursor:pointer;
+">
+❤️ Uma última surpresa ❤️
+</button>
+
+<p id="mensagemFinal" style="
+display:none;
+font-size:26px;
+margin-top:40px;
+line-height:1.8;
+color:#fff;
+">
+✨ Em qualquer universo...<br>
+eu escolheria você.<br><br>
+
+Eu te amo infinitamente, Gabriel. ❤️
+</p>
+
+</section>
+
+<script>
+
+function abrirCarta(){
+document.getElementById("inicio").style.display="none";
+document.getElementById("conteudo").style.display="block";
+}
+
+function surpresaFinal(){
+document.getElementById("mensagemFinal").style.display="block";
+}
+
+const inicio=new Date("2025-08-28T00:00:00");
+
+function atualizarTempo(){
+
+const agora=new Date();
+
+const diferenca=agora-inicio;
+
+const dias=Math.floor(diferenca/(1000*60*60*24));
+
+const horas=Math.floor((diferenca/(1000*60*60))%24);
+
+const minutos=Math.floor((diferenca/(1000*60))%60);
+
+const segundos=Math.floor((diferenca/1000)%60);
+
+document.getElementById("tempo").innerHTML=
+dias+" dias 💖 "+
+horas+" horas 💖 "+
+minutos+" minutos 💖 "+
+segundos+" segundos";
+
+}
+
+setInterval(atualizarTempo,1000);
+
+atualizarTempo();
+
+for(let i=0;i<120;i++){
+
+let estrela=document.createElement("div");
+
+estrela.className="star";
+
+estrela.style.left=Math.random()*100+"%";
+
+estrela.style.top=Math.random()*100+"%";
+
+estrela.style.animationDelay=(Math.random()*2)+"s";
+
+document.getElementById("stars").appendChild(estrela);
+
+}
+
+</script>
+
+</body>
+</html>  
